@@ -1,0 +1,196 @@
+/* default */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* body */
+body {
+  position: relative;
+  margin: 0px;
+}
+
+/* Header */
+.Header {
+  position: absolute;
+  padding: 20px 0 0 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+
+.HeaderLeft a:hover{
+  opacity: 0.8;
+}
+
+.HeaderLeft img {
+  width: auto;
+  height: 20px;
+}
+
+.HeaderRight ul {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  width: 755px;
+  margin: 0;
+  padding: 0;
+}
+
+.HeaderRight li {
+  font-size: 10px;
+  margin-left: 45px;
+}
+
+.HeaderRight a {
+  display: inline-block;
+  text-decoration: none;
+  color: #404040;
+}
+
+.HeaderRight a:hover {
+  opacity: 0.8;
+}
+
+.HeaderRight span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.HeaderRight .Counseling a {
+  display: inline-block;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #ff9800;
+  padding: 10px 20px;
+  border: 1px solid #ff9800;
+  border-radius: 20px;
+}
+
+/* FirstWrapper */
+.FirstWrapper {
+  position: relative;
+  padding: 105px 0 20px 0;
+  background-image: url(images/top-hero.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.FirstContainer {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.Introduction {
+  width: fit-content;
+  margin-bottom: 75px;
+}
+
+.Introduction h2 {
+  margin: 0 0 29.5px 0;
+  text-align: center;
+  font-size: 35px;
+}
+
+.MainImages {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.img_no1 {
+  width: 40%;
+}
+
+.MainContentButtons {
+  display: flex;
+  margin: 30px 0 0 0;
+}
+
+.MainContentButtons a {
+  text-decoration: none;
+}
+
+.MainContentButtons a:hover {
+  opacity: 0.8;
+}
+
+.MainContentButtons .Counseling {
+  color: #ffffff;
+  background-color: #ff9800;
+  margin-right: 10px;
+  padding: 18px 43px;
+  border: 1px solid #ff9800;
+  border-radius: 30px;
+}
+
+.MainContentButtons .RequestInfo {
+  color: #404040;
+  background-color: #ffffff;
+  padding: 18px 23px;
+  border: 1px solid #9b9b9b;
+  border-radius: 30px;
+}
+
+.Supplement {
+  margin: 0;
+  font-size: 12px;
+  color: #a9a9a9;
+} 
+
+/* SecondWrapper */
+.SecondWrapper {
+  background-color: #ff9800;
+  padding: 44px 0;
+}
+
+.SecondContainer {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+.AboutVideo {
+  width: 50%;
+}
+
+.AboutText {
+  color: #ffffff;
+  margin-left: 30px;
+}
+
+.AboutText h2 {
+  font-size: 35px;
+  letter-spacing: 3px;
+  margin: 0 0 10px 0;
+}
+
+.AboutText p {
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
+}
+
+.AboutCurriculumLink a {
+  display: flex;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.ArrowIcon {
+  vertical-align: middle;
+  margin-right: 5px;
+}
