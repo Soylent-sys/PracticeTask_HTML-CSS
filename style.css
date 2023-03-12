@@ -31,12 +31,18 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width: 1080px) {
-  .Header {
-    position: fixed;
-    background-color: #ffffff;
+  @media screen and (max-width: 1080px) {
+    .Header {
+      position: fixed;
+      background-color: #ffffff;
+    }
   }
-}
+  
+  @media screen and (max-width: 767px) {
+    .Header {
+      padding: 12px 0;
+    }
+  }
 
 .HeaderContainer {
   display: flex;
@@ -44,69 +50,87 @@ body {
   margin: 0 36px;
 }
 
+  @media screen and (max-width: 767px) {
+    .HeaderContainer {
+      margin: 0 20px;
+    }
+  }
+
 .HeaderLeft a:hover{
   opacity: 0.8;
 }
+
+  @media screen and (max-width: 767px) {
+    .HeaderLeft a:hover {
+      opacity: 1;
+    }
+  }
 
 .HeaderLeft img {
   width: auto;
   height: 20px;
 }
 
+  @media screen and (max-width: 767px) {
+    .HeaderLeft img {
+      height: 16px;
+    }
+  }
+
 .HeaderRight #check {
   display: none;
 }
 
-@media screen and (max-width: 1080px) {
-  .HeaderRight label {
-    display: inline-block;
+  @media screen and (max-width: 1080px) {
+    .HeaderRight label {
+      display: inline-block;
+    }
   }
-}
 
-@media screen and (max-width: 1080px) {
-  #check:checked ~ .Global-Nav ul {
-    transform: translateX(0%);
+  @media screen and (max-width: 1080px) {
+    #check:checked ~ .Global-Nav ul {
+      transform: translateX(0%);
+    }
+    
+    #check:checked ~ .HamButton span {
+      top: 50%;
+      transform: translate(0,-50%) rotate(45deg);
+    }
+    
+    #check:checked ~ .HamButton span::before {
+      display: none;
+    }
+    
+    #check:checked ~ .HamButton span::after {
+      top: 50%;
+      transform: translate(0,-50%) rotate(90deg);
+    }
+    
+    .HamButton {
+      display: inline-block;
+      position: relative;
+      width: 30px;
+      height: 21px;
+    }
+    
+    .HamButton span, .HamButton span::before, .HamButton span::after {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 30px;
+      background-color: #555555;
+      content: "";
+    }
+    
+    .HamButton span::before {
+      top: 10px;
+    }
+    
+    .HamButton span::after {
+      top: 20px;
+    }
   }
   
-  #check:checked ~ .HamButton span {
-    top: 50%;
-    transform: translate(0,-50%) rotate(45deg);
-  }
-  
-  #check:checked ~ .HamButton span::before {
-    display: none;
-  }
-  
-  #check:checked ~ .HamButton span::after {
-    top: 50%;
-    transform: translate(0,-50%) rotate(90deg);
-  }
-  
-  .HamButton {
-    display: inline-block;
-    position: relative;
-    width: 30px;
-    height: 21px;
-  }
-  
-  .HamButton span, .HamButton span::before, .HamButton span::after {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 30px;
-    background-color: #555555;
-    content: "";
-  }
-  
-  .HamButton span::before {
-    top: 10px;
-  }
-  
-  .HamButton span::after {
-    top: 20px;
-  }
-}
-
 .Global-Nav ul {
   display: flex;
   align-items: center;
@@ -114,32 +138,38 @@ body {
   width: 755px;
 }
 
-@media screen and (max-width: 1080px) {
-  .Global-Nav ul {
-    display: block;
-    position: fixed;
-    top: 66px;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    padding: 20px 0;
-    background-color: rgba(0,0,0,0.8);
-    transform: translateX(110%);
+  @media screen and (max-width: 1080px) {
+    .Global-Nav ul {
+      display: block;
+      position: fixed;
+      top: 66px;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding: 20px 0;
+      background-color: rgba(0,0,0,0.8);
+      transform: translateX(110%);
+    }
   }
-}
+  
+  @media screen and (max-width: 767px) {
+    .Global-Nav ul {
+      top: 50px;
+    }
+  }
 
 .Global-Nav li {
   font-size: 10px;
   margin-left: 45px;
 }
 
-@media screen and (max-width: 1080px) {
-  .Global-Nav li {
-    margin: 0;
-    padding: 22px 0;
+  @media screen and (max-width: 1080px) {
+    .Global-Nav li {
+      margin: 0;
+      padding: 22px 0;
+    }
   }
-}
 
 .Global-Nav a {
   display: block;
@@ -147,31 +177,37 @@ body {
   color: #404040;
 }
 
-@media screen and (max-width: 1080px) {
-  .Global-Nav a {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #ff9800;
+  @media screen and (max-width: 1080px) {
+    .Global-Nav a {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #ff9800;
+    }
   }
-}
 
 .Global-Nav a:hover {
   opacity: 0.8;
 }
+
+  @media screen and (max-width: 767px) {
+    .Global-Nav a:hover {
+      opacity: 1;
+    }
+  }
 
 .Global-Nav span {
   font-size: 12px;
   font-weight: bold;
 }
 
-@media screen and (max-width: 1080px) {
-  .Global-Nav span {
-    font-weight: 700px;
-    font-size: 16px;
-    letter-spacing: 5px;
-    color: #ffffff;
+  @media screen and (max-width: 1080px) {
+    .Global-Nav span {
+      font-weight: 700px;
+      font-size: 16px;
+      letter-spacing: 5px;
+      color: #ffffff;
+    }
   }
-}
 
 .Global-Nav .Counseling a {
   display: inline-block;
@@ -183,25 +219,31 @@ body {
   border-radius: 20px;
 }
 
-@media screen and (max-width: 1080px) {
-  .Global-Nav .Counseling a {
-    display: block;
-    width: 250px;
-    font-size: 16px;
-    letter-spacing: 0;
-    margin: 0 auto;
-    padding: 16px 50px;
-    border-radius: 50px
+  @media screen and (max-width: 1080px) {
+    .Global-Nav .Counseling a {
+      display: block;
+      width: 250px;
+      font-size: 16px;
+      letter-spacing: 0;
+      margin: 0 auto;
+      padding: 16px 50px;
+      border-radius: 50px
+    }
   }
-}
 
 
 /* main */
-@media screen and (max-width: 1080px) {
-  main {
-    padding-top: 60px;
+  @media screen and (max-width: 1080px) {
+    main {
+      padding-top: 60px;
+    }
   }
-}
+  
+  @media screen and (max-width: 767px) {
+    main {
+      padding-top: 50px;
+    }
+  }
 
 .FirstWrapper {
   padding: 105px 0 20px 0;
@@ -210,16 +252,48 @@ body {
   background-size: cover;
 }
 
+  @media screen and (max-width: 767px) {
+    .FirstWrapper {
+      background-image: none;
+      padding: 0 0 30px 0;
+    }
+  }
+
+.FirstWrapperImage-sp {
+  display: none;
+}
+
+  @media screen and (max-width: 767px) {
+    .FirstWrapperImage-sp {
+      display: block;
+      width: 100%;
+    }
+  }
+
 .FirstContainer {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 50px;
 }
 
+  @media screen and (max-width: 767px) {
+    .FirstContainer {
+      margin-top: -45vw;
+      padding: 0 20px;
+    }
+  }
+
 .Introduction {
   width: fit-content;
   margin-bottom: 75px;
 }
+
+  @media screen and (max-width: 767px) {
+    .Introduction {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
 
 .Introduction h2 {
   margin: 0 0 16px 0;
@@ -227,20 +301,49 @@ body {
   font-size: 35px;
 }
 
+  @media screen and (max-width: 767px) {
+    .Introduction h2 {
+      font-size: 25px;
+    }
+  }
+
 .MainImages {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+  @media screen and (max-width: 767px) {
+    .MainImages {
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+
 .img_no1 {
   width: 40%;
 }
+
+  @media screen and (max-width: 767px) {
+    .img_100percent {
+      width: 27%;
+    }
+    
+    .img_refund {
+      width: 27%;
+    }
+  }
 
 .MainContentButtons {
   display: flex;
   margin: 30px 0 0 0;
 }
+
+  @media screen and (max-width: 767px) {
+    .MainContentButtons {
+      display: block;
+    }
+  }
 
 .MainContentButtons a {
   text-decoration: none;
@@ -249,6 +352,12 @@ body {
 .MainContentButtons a:hover {
   opacity: 0.8;
 }
+
+  @media screen and (max-width: 767px) {
+    .MainContentButtons a:hover {
+      opacity: 1;
+    }
+  }
 
 .MainContentButtons .Counseling {
   color: #ffffff;
@@ -259,6 +368,14 @@ body {
   border-radius: 30px;
 }
 
+  @media screen and (max-width: 767px) {
+    .MainContentButtons .Counseling {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
 .MainContentButtons .RequestInfo {
   color: #404040;
   background-color: #ffffff;
@@ -267,11 +384,23 @@ body {
   border-radius: 30px;
 }
 
+  @media screen and (max-width: 767px) {
+    .MainContentButtons .RequestInfo {
+      display: none;
+    }
+  }
+
 .Supplement {
   margin: 0;
   font-size: 12px;
   color: #a9a9a9;
 }
+
+  @media screen and (max-width: 767px) {
+    .Supplement {
+      font-size: 11px;
+    }
+  }
 
 
 /* SecondWrapper */
@@ -279,6 +408,12 @@ body {
   background-color: #ff9800;
   padding: 44px 0;
 }
+
+  @media screen and (max-width: 767px) {
+    .SecondWrapper {
+      padding: 30px 0;
+    }
+  }
 
 .SecondContainer {
   max-width: 1140px;
@@ -288,44 +423,63 @@ body {
   align-items: center;
 }
 
-@media screen and (max-width: 1024px) {
-  .SecondContainer {
-    flex-direction: column;
+  @media screen and (max-width: 1024px) {
+    .SecondContainer {
+      flex-direction: column;
+    }
   }
-}
+
+  @media screen and (max-width: 767px) {
+    .SecondContainer {
+      padding: 0 20px;
+    }
+  }
 
 .AboutVideo {
   width: 50%;
 }
 
-@media screen and (max-width: 1024px) {
-  .AboutVideo {
-    width: 75%;
-    margin-bottom: 16px;
+  @media screen and (max-width: 1024px) {
+    .AboutVideo {
+      width: 75%;
+      margin-bottom: 16px;
+    }
   }
-}
+  
+  @media screen and (max-width: 767px) {
+    .AboutVideo {
+      width: 100%;
+    }
+  }
 
 .AboutText {
   color: #ffffff;
   margin-left: 30px;
 }
 
-@media screen and (max-width: 1024px) {
-  .AboutText {
-    width: 75%;
-    margin-left: 0;
+  @media screen and (max-width: 1024px) {
+    .AboutText {
+      width: 75%;
+      margin-left: 0;
+    }
   }
-}
+  
+  @media screen and (max-width: 767px) {
+    .AboutText {
+      width: 100%;
+    }
+  }
 
 .AboutText h2 {
   font-size: 35px;
   letter-spacing: 3px;
-  margin: 0 0 10px 0;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .AboutText p {
   letter-spacing: 1px;
-  margin: 0 0 10px 0;
+  margin-bottom: 16px;
 }
 
 .AboutCurriculumLink a {
@@ -336,6 +490,5 @@ body {
 }
 
 .ArrowIcon {
-  vertical-align: middle;
   margin-right: 5px;
 }
